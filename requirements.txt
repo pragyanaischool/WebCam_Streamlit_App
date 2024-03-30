@@ -1,5 +1,7 @@
-streamlit
-numpy
+streamlit>=1.30
+streamlit-webrtc>=0.47
+opencv-python>=4.9
+numpy>=1.26
 pandas
 Pillow
 opencv-python-headless
