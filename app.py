@@ -1,3 +1,28 @@
+import cv2
+import streamlit as st
+
+# Create a Streamlit app
+st.title("Webcam Feed")
+
+# Create a VideoCapture object
+cap = cv2.VideoCapture(0)
+
+# Loop over the frames from the webcam
+while True:
+    # Capture a frame
+    ret, frame = cap.read()
+
+    # Display the frame
+    st.image(frame, caption="Webcam Feed")
+
+    # If the user presses the 'q' key, break out of the loop
+    if cv2.waitKey(1) == ord('q'):
+        break
+
+# Destroy all windows
+cv2.destroyAllWindows()
+
+'''
 import streamlit as st
 import cv2
 
@@ -22,3 +47,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+'''
